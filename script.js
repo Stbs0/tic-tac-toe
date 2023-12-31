@@ -31,11 +31,11 @@ const Game = (() => {
       } else {
         console.log("The position is taken");
       }
-
+      
       GameBoard.printBoard();
       switchPlayerTurn();
-    };
 
+    };
     const switchPlayerTurn = () => {
       if (activePlayer === Player.player1) {
         activePlayer = Player.player2;
@@ -43,17 +43,21 @@ const Game = (() => {
         activePlayer = Player.player1;
       }
     };
+    const win = 
     return { play };
   }
 
   function winCheck() {
     for (let i = 0; i < GameBoard.board.length; i++) {
-      if (
-        GameBoard.board[i].every((cell) => cell === row[0] && cell !== null)
-      ) {
+      const row = GameBoard.board[i];
+      // Check if all elements in the row are the same and not null
+      if (row.every((cell) => cell === row[0] && cell !== null)) {
         console.log(`Player ${row[0]} wins!`);
+        // You can add additional logic or UI updates for a win
+        return true;
       }
     }
+    return false;
   }
   return { playRound };
 })();
