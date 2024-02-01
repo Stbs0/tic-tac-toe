@@ -9,19 +9,17 @@
   <body>
     <div class="wrapper">
       <div class="gameboard-wrapper">
-        <div class="gameboard">
-          <div class="block" data-row="1" data-column="1"></div>
-          <div class="block center" data-row="1" data-column="2"></div>
-          <div class="block" data-row="1" data-column="3"></div>
-          <div class="block row" data-column="1" data-row="2"></div>
-          <div class="block row center" data-row="2" data-column="2"></div>
-          <div class="block row" data-row="2" data-column="3"></div>
-          <div class="block" data-row="3" data-column="1"></div>
-          <div class="block center" data-row="3" data-column="2"></div>
-          <div class="block" data-row="3" data-column="3"></div>
-        </div>
+        <button class="block" data-row="0" data-column="0"></button>
+        <button class="block center" data-row="0" data-column="1"></button>
+        <button class="block" data-row="0" data-column="2"></button>
+        <button class="block row" data-column="0" data-row="1"></button>
+        <button class="block row center" data-row="1" data-column="1"></button>
+        <button class="block row" data-row="1" data-column="2"></button>
+        <button class="block" data-row="2" data-column="0"></button>
+        <button class="block center" data-row="2" data-column="1"></button>
+        <button class="block" data-row="2" data-column="2"></button>
       </div>
-
+      <p class="winner"></p>
       <div class="controller">
         <div class="button-wrapper">
           <button class="start">Start Game</button>
